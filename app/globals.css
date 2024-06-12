@@ -15,6 +15,7 @@
 body {
   background: var(--background-color);
   color: white;
+  overflow-x: hidden;
 }
 
 .title-text{
