@@ -24,13 +24,14 @@ export default function Gallery() {
     return (
         <div className="bg-[url('/assets/img/backgrounds/FONDO_01-01.jpg')] bg-no-repeat bg-cover py-10 mt-10">
             <div className="w-[90%] m-auto width-container">
-                <Image
+                {/* <Image
                     src="/assets/img/NUESTRA HISTORIA.png"
                     alt="Nuestra historia"
                     width={100}
                     height={100}
                     className="w-full max-w-[800px] m-auto"
-                />
+                /> */}
+                <img src="/assets/img/NUESTRA HISTORIA.png" alt="Nuestra historia" className="w-full max-w-[800px] m-auto"/>
             </div>
             {/* <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
                 {images.map((src, index) => (
