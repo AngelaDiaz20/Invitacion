@@ -56,7 +56,7 @@ export default function Home() {
       <section className="bg-white" data-aos="fade-up">
       <Location/></section>
       <Palette data-aos="fade-up" />
-      {/* <section className="dinosaur-game-section">
+      {/* <section className="dinosaur-game-section m-auto">
         <h1>Juego de boda</h1>
         <DinosaurGame />
       </section> */}

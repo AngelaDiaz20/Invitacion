@@ -13,7 +13,7 @@ import {
     Card,
 } from "@material-tailwind/react";
 
-import { FaRegCalendarCheck, FaRegImages, FaMusic } from "react-icons/fa";
+import { FaRegCalendarCheck, FaRegImages, FaMusic, FaUserTie, FaMailBulk } from "react-icons/fa";
 
 export default function Modal({buttonText, textColor}) {
     const [open, setOpen] = React.useState(false);
@@ -65,8 +65,22 @@ export default function Modal({buttonText, textColor}) {
                                 </ListItemPrefix>
                                 Sugerir una canción para el evento
                             </ListItem>
+                            <hr className="text-white my-3"/>
+                            <ListItem className="rounded-none py-1.5 px-3 text-sm font-normal text-white">
+                                <ListItemPrefix>
+                                <FaMailBulk />
+                                </ListItemPrefix>
+                                ¡Tendremos lluvia de sobres!
+                            </ListItem>
+                            <ListItem className="rounded-none py-1.5 px-3 text-sm font-normal text-white">
+                                <ListItemPrefix>
+                                    <FaUserTie />
+                                </ListItemPrefix>
+                                Nuestra etiqueta es formal, ¡ven cómodo!
+                            </ListItem>
                         </List>
                     </Card>
+                    {/* <img src="/assets/img/lluvia_de_sobres.png" alt="Lluvia de sobres" className="w-full max-w-[300px] m-auto"/> */}
                 </DialogBody>
                 <DialogFooter>
                     <a href="https://chat.whatsapp.com/F7qfK9F7tZNLBizFoTQePt" target="_blank">

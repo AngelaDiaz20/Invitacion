@@ -1,6 +1,5 @@
 // components/Game.jsx
-"use client"
-// components/Game.jsx
+"use client";
 import { useEffect, useRef, useState } from 'react';
 
 const DinosaurGame = () => {
@@ -29,18 +28,19 @@ const DinosaurGame = () => {
       const finishImg = new Image();
       finishImg.src = '/assets/img/game/mario.png';
 
-      let dino = { x: 50, y: canvas.height - 80, width: 50, height: 50, dy: 0, jumpHeight: -10, gravity: 0.5 };
+      let dino = { x: 50, y: canvas.height - 80, width: 50, height: 50, dy: 0, jumpHeight: -12, gravity: 0.5, onGround: true };
       let obstacles = [];
       let frame = 0;
 
       const handleJump = () => {
-        if (dino.y === canvas.height - 80) {
+        if (dino.onGround) {
           dino.dy = dino.jumpHeight;
+          dino.onGround = false;
         }
       };
 
       const addObstacle = () => {
-        obstacles.push({ x: canvas.width, y: canvas.height - 80, width: 50, height: 50 });
+        obstacles.push({ x: canvas.width, y: canvas.height - 80, width: 50, height: 50, passed: false });
       };
 
       const detectCollision = (dino, obstacle) => {
@@ -63,6 +63,7 @@ const DinosaurGame = () => {
         } else {
           dino.y = canvas.height - dino.height;
           dino.dy = 0;
+          dino.onGround = true;
         }
         context.drawImage(dinosaurImg, dino.x, dino.y, dino.width, dino.height);
 
@@ -79,14 +80,17 @@ const DinosaurGame = () => {
             setIsRunning(false);
           }
 
-          if (obstacle.x + obstacle.width < 0) {
+          // Check if the obstacle is passed
+          if (obstacle.x + obstacle.width < dino.x && !obstacle.passed) {
             setScore(prevScore => prevScore + 1);
+            obstacle.passed = true;
           }
 
           return obstacle;
-        }).filter(obstacle => obstacle.x + obstacle.width > 0);
+        });
 
-        if (score >= 10) { // Número de obstáculos para finalizar el juego
+        // Condición para finalizar el juego
+        if (score >= 10) {
           setIsGameFinished(true);
           setIsRunning(false);
         }
@@ -120,7 +124,7 @@ const DinosaurGame = () => {
         cancelAnimationFrame(animationFrameId);
       };
     }
-  }, [isRunning]);
+  }, [isRunning, score]);
 
   return (
     <div>
