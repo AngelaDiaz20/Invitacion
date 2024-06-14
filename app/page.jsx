@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import Countdown from "./components/Countdown";
 import Timeline from "./components/Timeline";
 import Dates from "./components/Dates";
@@ -13,10 +15,14 @@ import Modal from "./ui/Modal";
 import DinosaurGame from "./components/videogame/DinosaurGame"
 import "./ui/home.css";
 import { ephesis } from "./ui/fonts";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
   const targetDate = '2024-07-06T09:00:00';
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <main className="text-center">
       <section>
@@ -30,7 +36,7 @@ export default function Home() {
       <section className="cont-quote width-container">
         <Quote />
       </section>
-      <section className="bg-[url('/assets/img/backgrounds/bg-invitation.png')] bg-repeat bg-contain bg-right h-[120px] bg-[#D27345] flex justify-center items-center">
+      <section className="bg-[url('/assets/img/backgrounds/bg-invitation.png')] bg-repeat bg-contain bg-right h-[120px] bg-[#D27345] flex justify-center items-center" data-aos="fade-up">
         <div className="bg-black px-5 py-3 rounded-md"><p>Escríbenos y</p>
           <Modal buttonText={"Confirma tu asistencia aquí"}/>
         </div>
@@ -42,19 +48,19 @@ export default function Home() {
         <h1 className={`text-[40px] sm:text-[45px] md:text-[50px] lg:text-[70px] font-bold my-4 px-8 text-black ${ephesis.className}`}>Gracias por acompañarnos</h1>
         <Dates />
       </div>
-      <h1 className={`px-8 m-10 text-[40px] sm:text-[45px] md:text-[50px] lg:text-[70px] ${ephesis.className} title-text leading-none font-bold`}>Recordemos el momento</h1>
+      <h1 className={`px-8 m-10 text-[40px] sm:text-[45px] md:text-[50px] lg:text-[70px] ${ephesis.className} title-text leading-none font-bold`} data-aos="fade-up">Recordemos el momento</h1>
       <Whatsapp/>
-      <section className="gallery-section">
+      <section className="gallery-section" data-aos="fade-up">
         <Galleryn />
       </section>
-      <section className="bg-white">
+      <section className="bg-white" data-aos="fade-up">
       <Location/></section>
-      <Palette />
+      <Palette data-aos="fade-up" />
       {/* <section className="dinosaur-game-section">
         <h1>Juego de boda</h1>
         <DinosaurGame />
       </section> */}
-      <Letter />
+      <Letter data-aos="fade-up" />
 
     </main>
   );
