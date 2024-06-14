@@ -69,7 +69,7 @@ export default function Modal({buttonText, textColor}) {
                     </Card>
                 </DialogBody>
                 <DialogFooter>
-                    <a href="https://wa.link/mqterf" target="_blank">
+                    <a href="https://chat.whatsapp.com/F7qfK9F7tZNLBizFoTQePt" target="_blank">
                     <Button className="flex items-center gap-2 bg-[#3E4D45]" onClick={handleOpen}>
                         ¡Lo tengo!{" "}
                         <svg

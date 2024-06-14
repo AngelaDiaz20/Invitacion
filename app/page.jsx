@@ -29,6 +29,16 @@ export default function Home() {
       <section className="cont-quote width-container">
         <Quote />
       </section>
+      <section className="bg-[url('/assets/img/backgrounds/bg-invitation.png')] bg-repeat bg-contain bg-right h-[120px] bg-[#D27345] flex justify-center items-center">
+        <div className="bg-black px-5 py-3 rounded-md"><p>Escríbenos y</p><button className="cta text-white m-auto">
+          <a href="https://chat.whatsapp.com/F7qfK9F7tZNLBizFoTQePt" target="_blank">
+                <span text-but>¡Confirma tu asistencia aquí!</span></a>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </button></div>
+      </section>
       <section className="cont-timeline">
         <h1 className={`text-[40px] sm:text-[45px] md:text-[50px] lg:text-[100px] my-4 px-8 ${ephesis.className} title-text`}>Este es el plan:</h1>
         <Timeline /></section>
@@ -44,10 +54,10 @@ export default function Home() {
       <section className="bg-white">
       <Location/></section>
       <Palette />
-      <section className="dinosaur-game-section">
+      {/* <section className="dinosaur-game-section">
         <h1>Juego de boda</h1>
         <DinosaurGame />
-      </section>
+      </section> */}
       <Letter />
 
     </main>

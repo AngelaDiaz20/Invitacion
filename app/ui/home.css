@@ -614,5 +614,7 @@
         left: 115px;
       }
 
-
+      .text-but{
+        font-size: 12px;
+      }
 }
