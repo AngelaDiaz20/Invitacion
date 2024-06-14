@@ -23,6 +23,13 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.552);
 }
 
+/* styles/globals.css */
+canvas {
+  width: 100%;
+  max-width: 800px;
+}
+
+
 @media (max-width: 480px) {
   body {
     overflow-x: hidden;

@@ -191,7 +191,6 @@
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: #ffffff;
 }
 
 .cta svg {
@@ -220,7 +219,14 @@
     transform: scale(0.95);
 }
 
-
+.cont-location{
+  background: #7A9285;
+  position: absolute;
+  height: min-content;
+  bottom: 40px;
+  left: 65%;
+  border-radius: 5px;
+}
 
 
 
@@ -547,6 +553,19 @@
     
     .gallery-section {
       height: 780px;
+    }
+
+    .location{
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .cont-location{
+      position:unset;
+      width: 100%;
+      border-radius: none;
+      height: min-content;
+      border-radius: 5px;
     }
 }
 

@@ -10,8 +10,8 @@ function DateItem({ imageUrl, description }) {
         AOS.init(); 
     }, []);
     return (
-        <div className="flex flex-col items-center mb-8" data-aos="fade-up">
-            <div className="z-20 bg-[#4D665E] shadow-xl w-20 h-20 rounded-full">
+        <div className="flex flex-col items-center mb-8  bg-[url('/assets/img/backgrounds/bg-date.png')] bg-no-repeat bg-cover bg-center py-10" data-aos="fade-up">
+            <div className="z-20 bg-[#202723] shadow-xl w-20 h-20 rounded-full">
                 <Image
                     src={imageUrl}
                     alt={description}
@@ -20,7 +20,7 @@ function DateItem({ imageUrl, description }) {
                     className="mx-auto rounded-full"
                 />
             </div>
-            <div className="bg-[#7A9285] rounded-lg shadow-xl w-full mt-4">
+            <div className="bg-[#202723] rounded-lg shadow-xl w-full mt-4">
                 <p className="text-sm leading-snug tracking-wide text-white text-opacity-100 md:text-base p-4 font-bold">
                     {description}
                 </p>

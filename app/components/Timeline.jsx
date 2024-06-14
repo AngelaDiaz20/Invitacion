@@ -37,9 +37,9 @@ export default function Timeliner() {
 
                 {/* Primer item */}
                 <TimelineItem
-                    time="9:30 am"
+                    time="9:00 am"
                     imageUrl="/assets/img/A_01 elemets-01-02.png"
-                    title="Ceremonia en la iglesia"
+                    title="Reunión en la iglesia"
                     sideClass="left-timeline"
                     sideText="justify-end"
                     sideTitle="text-left"
@@ -48,9 +48,9 @@ export default function Timeliner() {
 
                 {/* Segundo item */}
                 <TimelineItem
-                    time="11:00 am"
-                    imageUrl="/assets/img/A_01 elemets-01-01.png"
-                    title="Sesión de fotos"
+                    time="12:00 pm"
+                    imageUrl="/assets/img/A_01 elemets-01-09.png"
+                    title="Recepción Terraza"
                     sideClass="flex-row-reverse"
                     sideText="text-left"
                     sideTitle="text-right"
@@ -60,8 +60,8 @@ export default function Timeliner() {
                 {/* Tercer item */}
                 <TimelineItem
                     time="12:30 pm"
-                    imageUrl="/assets/img/A_01 elemets-01-08.png"
-                    title="Pastel e integración"
+                    imageUrl="/assets/img/A_01 elemets-01-01.png"
+                    title="Sesión de fotos"
                     sideClass="left-timeline"
                     sideText="justify-end"
                     sideTitle="text-left"
@@ -70,7 +70,7 @@ export default function Timeliner() {
 
                 {/* Cuarto item */}
                 <TimelineItem
-                    time="2:00 pm"
+                    time="1:00 pm"
                     imageUrl="/assets/img/A_01 elemets-01-07.png"
                     title="Primer baile"
                     sideClass="flex-row-reverse"
@@ -81,7 +81,7 @@ export default function Timeliner() {
 
                 {/* Quinto item */}
                 <TimelineItem
-                    time="12:30 pm"
+                    time="1:30 pm"
                     imageUrl="/assets/img/A_01 elemets-01-03.png"
                     title="Brindis"
                     sideClass="left-timeline"
@@ -89,6 +89,19 @@ export default function Timeliner() {
                     sideTitle="text-left"
                     sideCont="justify-start"
                 />
+                
+                {/* Sexto item */}
+                <TimelineItem
+                    time="2:30 pm"
+                    imageUrl="/assets/img/A_01 elemets-01-08.png"
+                    title="Comida"
+                    sideClass="flex-row-reverse"
+                    sideText="text-left"
+                    sideTitle="text-right"
+                    sideCont="justify-end"
+                />
+
+                
             </div>
         </div>
     );

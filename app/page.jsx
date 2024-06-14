@@ -9,6 +9,7 @@ import Letter from "./components/Letter";
 import Palette from "./components/Palette";
 import Video from "./components/Video";
 import Whatsapp from "./components/Whatsapp";
+import DinosaurGame from "./components/videogame/DinosaurGame"
 import "./ui/home.css";
 import { ephesis } from "./ui/fonts";
 
@@ -31,8 +32,8 @@ export default function Home() {
       <section className="cont-timeline">
         <h1 className={`text-[40px] sm:text-[45px] md:text-[50px] lg:text-[100px] my-4 px-8 ${ephesis.className} title-text`}>Este es el plan:</h1>
         <Timeline /></section>
-      <div className="bg-[url('/assets/img/backgrounds/flower.png')] bg-no-repeat bg-cover py-4 leading-none font-bold">
-        <h1 className={`text-[40px] sm:text-[45px] md:text-[50px] lg:text-[70px] my-4 px-8 text-black ${ephesis.className}`}>Gracias por acompañarnos</h1>
+      <div className="bg-[#BDD7C9] py-4 leading-none font-bold">
+        <h1 className={`text-[40px] sm:text-[45px] md:text-[50px] lg:text-[70px] font-bold my-4 px-8 text-black ${ephesis.className}`}>Gracias por acompañarnos</h1>
         <Dates />
       </div>
       <h1 className={`px-8 m-10 text-[40px] sm:text-[45px] md:text-[50px] lg:text-[70px] ${ephesis.className} title-text leading-none font-bold`}>Recordemos el momento</h1>
@@ -40,9 +41,13 @@ export default function Home() {
       <section className="gallery-section">
         <Galleryn />
       </section>
-      <section className="bg-white px-8">
+      <section className="bg-white">
       <Location/></section>
       <Palette />
+      <section className="dinosaur-game-section">
+        <h1>Juego de boda</h1>
+        <DinosaurGame />
+      </section>
       <Letter />
 
     </main>

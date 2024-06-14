@@ -2,7 +2,7 @@ import "./globals.css";
 import { open_sans } from "./ui/fonts";
 
 export const metadata = {
-  title: "Nos casamos",
+  title: "¡Te invitamos a nuestra boda!",
   description: "Invitación a boda",
 };
 
