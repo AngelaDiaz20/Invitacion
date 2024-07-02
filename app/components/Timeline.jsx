@@ -37,7 +37,7 @@ export default function Timeliner() {
 
                 {/* Primer item */}
                 <TimelineItem
-                    time="9:00 am"
+                    time="8:30 am"
                     imageUrl="/assets/img/A_01 elemets-01-02.png"
                     title="Reunión en la iglesia"
                     sideClass="left-timeline"
@@ -50,7 +50,7 @@ export default function Timeliner() {
                 <TimelineItem
                     time="12:00 pm"
                     imageUrl="/assets/img/A_01 elemets-01-09.png"
-                    title="Recepción Terraza"
+                    title="Recepción"
                     sideClass="flex-row-reverse"
                     sideText="text-left"
                     sideTitle="text-right"
